@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>{{ title | default: "MKF" }}</title>
+
+    <link rel="stylesheet" href="/sanitize.css">
+    <link rel="stylesheet" href="/theme.css">
+    <link rel="stylesheet" href="/styles.css">
+    <script src="https://kit.fontawesome.com/9d4a9ac1cf.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <header>
+      <div>
+        <span>MKF</span>
+      </div>
+      <div id="header-links">
+        <a href="https://github.com/MorganKF" aria-label="GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+        <a href="https://morganf.itch.io/" aria-label="itch.io"><i class="fa-brands fa-itch-io" aria-hidden="true"></i></a>
+      </div>
+    </header>
+    
+    <nav id="nav" aria-label="Primary Navigation">
+      <a href="/" {% if page.url == '/' %}aria-current="page"{% endif %}>Home</a>
+      <a href="/thoughts/" {% if page.url contains '/thoughts' %}aria-current="page"{% endif %}>Thoughts</a>
+    </nav>
+    
+    <main id="main-content">
+      {{content}}
+    </main>
+    
+    <footer>
+    </footer>
+  </body>
+</html>

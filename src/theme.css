@@ -1,0 +1,16 @@
+:root {
+  color-scheme: light dark;
+
+  --color-bg: light-dark(#e6f3ff, #0a1628);
+  --color-surface: light-dark(#ffffff, #1a2744);
+  --color-primary: light-dark(#0066cc, #4da6ff);
+  --color-secondary: light-dark(#00a8e8, #66d9ff);
+  --color-text: light-dark(#1a1a2e, #e8e8f0);
+  --color-text-muted: light-dark(#5a5a6e, #a0a0b8);
+  --color-accent: light-dark(#ff6b6b, #ff8e8e);
+  --color-border: light-dark(rgba(20, 20, 40, 0.25), rgba(160, 160, 184, 0.25));
+
+  --spacing-unit: 1rem;
+  --grid-gap: calc(1rem * 1.25);
+  --border-radius: 0.75rem;
+}
