@@ -1,0 +1,95 @@
+#nav {
+  display: flex;
+  flex-direction: column;
+  grid-area: nav;
+  position: relative;
+}
+
+#nav::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: calc(var(--grid-gap) / 2 * -1);
+  width: 1px;
+  background-color: var(--color-border);
+}
+
+#nav a {
+  color: var(--color-text-muted);
+  text-decoration: none;
+}
+
+#nav a[aria-current="page"] {
+  color: var(--color-text) !important;
+  text-decoration: underline;
+}
+
+#nav a:hover {
+  color: var(--color-text);
+}
+
+.sidebar {
+  position: sticky;
+  top: var(--spacing-unit);
+  font-size: 0.9rem;
+}
+
+.sidebar ol,
+.sidebar ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin-top: 10px;
+}
+
+.sidebar ul ul,
+.sidebar ol ol {
+  padding-left: 1rem;
+  margin-top: 5px;
+}
+
+.sidebar li {
+  margin-bottom: 8px;
+}
+
+.sidebar a {
+  color: var(--color-text-muted);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.sidebar a:hover {
+  color: var(--color-text);
+}
+
+.sidebar a.active {
+  color: var(--color-text) !important;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.back-to-top-container {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.back-to-top-container.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.back-to-top {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--color-text-muted);
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.2s ease;
+  width: 100%;
+}
+
+.back-to-top:hover {
+  color: var(--color-text);
+}

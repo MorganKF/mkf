@@ -1,7 +1,51 @@
 ---
 layout: default.liquid
 ---
-<p>Hi, I'm Morgan! <br> I'm a professional developer who builds a little bit of everything. Welcome to my
-  personal corner of the web! Eventually, I'll flesh out the site and get to adding some proper posts, assuming I can
-  stop
-  fighting with my homelab and bouncing from project to project long enough to write them.</p>
+
+<div class="hero-blurb">
+  <h1>Hi, I'm Morgan.</h1>
+  <p>I'm a professional developer who builds a little bit of everything. Welcome to my personal corner of the web!</p>
+</div>
+
+<div class="recent-posts-section">
+
+  <div class="section-header">
+    <h2>Recent Thoughts</h2>
+  </div>
+
+  <div class="post-collection">
+    {% for post in collections.thoughts reversed limit:3 %}
+    <a href="{{ post.url }}" class="post-row">
+
+      <div class="post-row-meta">
+        <time datetime="{{ post.date | date: '%Y-%m-%d' }}">
+          {{ post.date | date: "%b %d, %Y" }}
+        </time>
+        <span class="read-time">{{ post.templateContent | readTime }}</span>
+      </div>
+
+      <div class="post-row-content">
+        <div class="post-title-line">
+          <h2 class="post-preview-title">{{ post.data.title }}</h2>
+
+          {% if post.data.tags %}
+          <div class="tag-list">
+            {% for tag in post.data.tags %}
+            {% if tag != "thoughts" %}
+            <span class="post-tag">{{ tag }}</span>
+            {% endif %}
+            {% endfor %}
+          </div>
+          {% endif %}
+        </div>
+
+        {% if post.data.subtitle %}
+        <p class="post-preview-subtitle">{{ post.data.subtitle }}</p>
+        {% endif %}
+      </div>
+
+    </a>
+    {% endfor %}
+  </div>
+
+</div>
