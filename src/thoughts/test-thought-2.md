@@ -1,13 +1,16 @@
 ---
 title: Building a test post 2
 subtitle: A test for embeds
-date: 2026-05-27
-tags: ["rust", "nix"]
-image: https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&q=80
+date: 2026-05-27T00:00:00.000Z
+image: /assets/media/pexels-lichtblick800-28549070.jpg
 imageAlt: A close up of a circuit board.
+tags:
+  - rust
+  - nix
 ---
 
 ## Testing
+
 Here is a test post
 
 <div class="code-header">test_file.rs</div>
@@ -17,7 +20,9 @@ pub fn main() {
     println!("Text");
 }
 ```
+
 ## Testing
+
 Here is a test post
 
 <div class="code-header">test_file.rs</div>
@@ -27,7 +32,9 @@ pub fn main() {
     println!("Text");
 }
 ```
+
 ### Sub Testing Nix
+
 Here is a test post
 
 <div class="code-header">test_file.nix</div>
@@ -47,7 +54,9 @@ Here is a test post
   ];
 }
 ```
+
 ## Testing
+
 Here is a test post
 
 <div class="code-header">test_file.rs</div>
@@ -57,7 +66,9 @@ pub fn main() {
     println!("Text");
 }
 ```
+
 ## Testing
+
 Here is a test post
 
 <div class="code-header">test_file.rs</div>
@@ -67,7 +78,9 @@ pub fn main() {
     println!("Text");
 }
 ```
+
 ## Testing
+
 Here is a test post
 
 <div class="code-header">test_file.rs</div>
@@ -77,7 +90,9 @@ pub fn main() {
     println!("Text");
 }
 ```
+
 ## Testing
+
 Here is a test post
 
 <div class="code-header">test_file.rs</div>

@@ -7,12 +7,10 @@
     <title>{{ title | default: "MKF" }}</title>
 
     <!-- EMBED METADATA -->
+
     {% if image %}
-      {% if image contains "http://" or image contains "https://" %}
-        {% assign absoluteImageUrl = image %}
-      {% else %}
-        {% assign absoluteImageUrl = "https://mkf.dev" | append: image %}
-      {% endif %}
+      {% capture optimized_path %}{% ogImage image %}{% endcapture %}
+      {% assign absoluteImageUrl = "https://mkf.dev" | append: optimized_path %}
 
       <meta property="og:type" content="article" />
       <meta property="og:image" content="{{ absoluteImageUrl }}" />
