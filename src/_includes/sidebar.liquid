@@ -1,0 +1,14 @@
+{% capture toc_content %}{{ content | toc }}{% endcapture %}
+
+{% if toc_content != blank %}
+  <aside class="sidebar">
+    <hr class="separator" aria-hidden="true">
+    {{ toc_content }}
+    <div class="back-to-top-container">
+      <hr class="separator" aria-hidden="true">
+      <a href="#top" class="back-to-top">
+        <i class="fa-solid fa-arrow-up" aria-hidden="true"></i> Top
+      </a>
+    </div>
+  </aside>
+{% endif %}

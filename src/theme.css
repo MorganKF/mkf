@@ -11,6 +11,18 @@
   --color-border: light-dark(rgba(20, 20, 40, 0.25), rgba(160, 160, 184, 0.25));
 
   --spacing-unit: 1rem;
-  --grid-gap: calc(1rem * 1.25);
+  --grid-gap: calc(var(--spacing-unit) * 1.25);
   --border-radius: 0.75rem;
+
+  /* Syntax highlight */
+  --syntax-bg: var(--color-surface);
+  --syntax-text: var(--color-text);
+  --syntax-comment: var(--color-text-muted);
+  --syntax-punctuation: light-dark(#5c6370, #abb2bf);
+  --syntax-tag: light-dark(#e45649, #f92672);
+  --syntax-number: light-dark(#a626a4, #ae81ff);
+  --syntax-string: light-dark(#50a14f, #a6e22e);
+  --syntax-function: light-dark(#c18401, #e6db74);
+  --syntax-keyword: light-dark(#0184bc, #66d9ef);
+  --syntax-regex: light-dark(#986801, #fd971f);
 }

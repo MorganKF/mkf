@@ -1,0 +1,5 @@
+{
+  "layout": "post.liquid",
+  "tags": ["thoughts"],
+  "permalink": "/thoughts/{{ title | slugify }}/"
+}

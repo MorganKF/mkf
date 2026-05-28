@@ -1,0 +1,123 @@
+.code-header {
+  display: block;
+  font-family: Consolas, "Courier New", monospace;
+  font-size: 0.85rem;
+  color: var(--syntax-comment);
+  background: color-mix(in srgb, var(--color-surface), black 10%);
+  border: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+  padding: 0.4rem 1rem;
+  margin-top: var(--spacing-unit);
+}
+
+.code-header + pre[class*="language-"] {
+  margin-top: 0;
+  border-top: none;
+}
+
+code[class*="language-"],
+pre[class*="language-"] {
+  color: var(--syntax-text);
+  background: none;
+  font-family: Consolas, "Courier New", monospace;
+  font-size: 1em;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.5;
+  tab-size: 4;
+  hyphens: none;
+}
+
+pre[class*="language-"] {
+  padding: 1rem;
+  margin: var(--spacing-unit) 0;
+  overflow: auto;
+  border: 1px solid var(--color-border);
+  border-radius: 0;
+  background: var(--syntax-bg);
+}
+
+:not(pre) > code[class*="language-"] {
+  padding: 0.1em 0.3em;
+  border: 1px solid var(--color-border);
+  border-radius: 0;
+  background: var(--syntax-bg);
+  white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: var(--syntax-comment);
+}
+
+.token.punctuation {
+  color: var(--syntax-punctuation);
+}
+
+.token.namespace {
+  opacity: 0.7;
+}
+
+.token.property,
+.token.tag,
+.token.constant,
+.token.symbol,
+.token.deleted {
+  color: var(--syntax-tag);
+}
+
+.token.boolean,
+.token.number {
+  color: var(--syntax-number);
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+  color: var(--syntax-string);
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.token.variable {
+  color: var(--syntax-text);
+}
+
+.token.atrule,
+.token.attr-value,
+.token.function,
+.token.class-name {
+  color: var(--syntax-function);
+}
+
+.token.keyword {
+  color: var(--syntax-keyword);
+}
+
+.token.regex,
+.token.important {
+  color: var(--syntax-regex);
+}
+
+.token.important,
+.token.bold {
+  font-weight: bold;
+}
+.token.italic {
+  font-style: italic;
+}
+
+.token.entity {
+  cursor: help;
+}

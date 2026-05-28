@@ -1,0 +1,42 @@
+---
+layout: default.liquid
+---
+<article>
+  <div class="post-header">
+    {% if image %}
+      <img src="{{ image }}" alt="{{ imageAlt }}" class="post-header-image" />
+    {% endif %}
+    
+    <div class="post-title-container">
+      <h1 class="post-title">{{ title }}</h1>
+      {% if subtitle %}
+        <p class="post-subtitle">{{ subtitle }}</p>
+      {% endif %}
+    </div>
+
+    
+    <div class="post-meta">
+      <div class="meta-item">
+        <i class="fa-regular fa-calendar" aria-hidden="true"></i>
+        <time datetime="{{ page.date | date: '%Y-%m-%d' }}">{{ page.date | date: "%B %d, %Y" }}</time>
+      </div>
+      
+      {% if tags %}
+      <div class="meta-item">
+        <i class="fa-solid fa-hashtag" aria-hidden="true"></i>
+        <div class="tag-list">
+          {% for tag in tags %}
+            <span class="post-tag">{{ tag }}</span>
+          {% endfor %}
+        </div>
+      </div>
+      {% endif %}
+    </div>
+  </div>
+
+  <hr class="separator" />
+
+  <div class="content">
+    {{ content }}
+  </div>
+</article>

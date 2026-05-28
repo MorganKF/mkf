@@ -6,10 +6,45 @@
     
     <title>{{ title | default: "MKF" }}</title>
 
+    {% if image %}
+      {% if image contains "http://" or image contains "https://" %}
+        {% assign absoluteImageUrl = image %}
+      {% else %}
+        {% assign absoluteImageUrl = "https://mkf.dev" | append: image %}
+      {% endif %}
+
+      <meta property="og:type" content="article" />
+      <meta property="og:image" content="{{ absoluteImageUrl }}" />
+      <meta property="og:image:alt" content="{{ imageAlt }}" />
+      
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:image" content="{{ absoluteImageUrl }}" />
+      <meta name="twitter:image:alt" content="{{ imageAlt }}" />
+    {% endif %}
+
+    {% if subtitle %}
+      <meta name="description" content="{{ subtitle }}" />
+      <meta property="og:description" content="{{ subtitle }}" />
+      <meta name="twitter:description" content="{{ subtitle }}" />
+    {% endif %}
+
+    {% if page.date %}
+      <meta property="article:published_time" content="{{ page.date | date: '%Y-%m-%d' }}" />
+    {% endif %}
+
+    {% if tags %}
+      {% for tag in tags %}
+        <meta property="article:tag" content="{{ tag }}" />
+      {% endfor %}
+    {% endif %}
+
     <link rel="stylesheet" href="/sanitize.css">
     <link rel="stylesheet" href="/theme.css">
     <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="/syntax.css">
+    <link rel="alternate" type="application/atom+xml" title="My Thoughts RSS Feed" href="/thoughts/feed.xml" />
     <script src="https://kit.fontawesome.com/9d4a9ac1cf.js" crossorigin="anonymous"></script>
+    <script src="/assets/thoughts-observer.js"></script>
   </head>
   <body>
     <header>
@@ -25,9 +60,11 @@
     <nav id="nav" aria-label="Primary Navigation">
       <a href="/" {% if page.url == '/' %}aria-current="page"{% endif %}>Home</a>
       <a href="/thoughts/" {% if page.url contains '/thoughts' %}aria-current="page"{% endif %}>Thoughts</a>
+
+      {% include "sidebar.liquid" %}
     </nav>
     
-    <main id="main-content">
+    <main id="main-content" class="content">
       {{content}}
     </main>
     
