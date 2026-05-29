@@ -47,6 +47,39 @@ a:active {
   color: var(--color-accent);
 }
 
+a[aria-label] {
+  position: relative;
+  display: inline-block;
+}
+
+a[aria-label]::after {
+  content: attr(aria-label);
+  position: absolute;
+  top: 120%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-5px);
+
+  background: var(--color-surface);
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  white-space: nowrap;
+
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.2s ease-in-out;
+  pointer-events: none;
+}
+
+a[aria-label]:hover::after,
+a[aria-label]:focus::after {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+
 .separator {
   border: 0;
   border-top: 1px solid var(--color-border);
