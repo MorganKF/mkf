@@ -27,8 +27,24 @@ body {
     "footer footer footer";
 }
 
+a {
+  color: var(--color-primary);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: color 0.2s ease-in-out;
+}
+
+a:visited {
+  color: var(--color-primary);
+}
+
+a:hover,
 a:focus {
-  color: var(--color-text);
+  color: var(--color-secondary);
+}
+
+a:active {
+  color: var(--color-accent);
 }
 
 .separator {

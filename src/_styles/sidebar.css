@@ -23,6 +23,9 @@
 #nav a[aria-current="page"] {
   color: var(--color-text) !important;
   text-decoration: underline;
+  text-decoration-color: var(--color-accent);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
 }
 
 #nav a:hover {
