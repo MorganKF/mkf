@@ -1,6 +1,6 @@
 ---
-title: Nixifying the homelab
-subtitle: All things nix
+title: Nixifying the Homelab
+subtitle: Everything declarative. As it should be.
 date: 2026-05-28T22:48:44.664Z
 image: /assets/media/terraform-nix-nomad.png
 imageAlt: 'Terraform, Nix, Nomad icons'
