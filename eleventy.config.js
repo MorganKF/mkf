@@ -30,6 +30,11 @@ export default function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy("src/assets/**/*.!(png|jpg|jpeg)");
   }
 
+  // Copy over any js files
+  eleventyConfig.addPassthroughCopy({
+    "src/**/*.js": ".",
+  });
+
   // Add icons
   eleventyConfig.addPassthroughCopy({ "src/favicon.ico": "favicon.ico" });
   eleventyConfig.addPassthroughCopy({

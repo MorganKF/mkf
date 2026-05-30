@@ -13,13 +13,14 @@ html {
 body {
   max-width: 1100px;
   padding: 20px;
+  min-height: 100vh;
   margin: 0 auto;
   font-family: "Tahoma", "MS Sans Serif", sans-serif;
   font-size: 18px;
   color: var(--color-text);
   display: grid;
   grid-template-columns: 200px 1fr 200px;
-  grid-template-rows: auto 1fr auto;
+  grid-template-rows: auto auto 1fr;
   gap: var(--grid-gap);
   grid-template-areas:
     "header header header"
@@ -139,4 +140,30 @@ footer {
   padding-right: 15px;
   gap: 10px;
   grid-area: footer;
+  align-self: end;
+}
+
+.site-footer {
+  padding: var(--spacing-unit) 0;
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  opacity: 0.25;
+  border: none;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.site-footer:hover {
+  opacity: 1;
+}
+
+#source-link {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.2s ease-in-out;
+}
+
+#source-link:hover,
+#source-link:focus {
+  color: var(--color-secondary);
 }
