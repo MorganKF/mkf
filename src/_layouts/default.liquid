@@ -7,35 +7,7 @@
     <title>{{ title | default: "MKF" }}</title>
 
     <!-- EMBED METADATA -->
-
-    {% if image %}
-      {% capture optimized_path %}{% ogImage image %}{% endcapture %}
-      {% assign absoluteImageUrl = "https://mkf.dev" | append: optimized_path %}
-
-      <meta property="og:type" content="article" />
-      <meta property="og:image" content="{{ absoluteImageUrl }}" />
-      <meta property="og:image:alt" content="{{ imageAlt }}" />
-      
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:image" content="{{ absoluteImageUrl }}" />
-      <meta name="twitter:image:alt" content="{{ imageAlt }}" />
-    {% endif %}
-
-    {% if subtitle %}
-      <meta name="description" content="{{ subtitle }}" />
-      <meta property="og:description" content="{{ subtitle }}" />
-      <meta name="twitter:description" content="{{ subtitle }}" />
-    {% endif %}
-
-    {% if page.date %}
-      <meta property="article:published_time" content="{{ page.date | date: '%Y-%m-%d' }}" />
-    {% endif %}
-
-    {% if tags %}
-      {% for tag in tags %}
-        <meta property="article:tag" content="{{ tag }}" />
-      {% endfor %}
-    {% endif %}
+    {%include "metadata.liquid" %}
 
     <!-- MANIFEST -->
     <link rel="manifest" href="/site.webmanifest">
