@@ -52,3 +52,9 @@
 .view-all-link:hover {
   color: var(--color-primary);
 }
+
+@media (max-width: 700px) {
+  .hero-blurb h1 {
+    font-size: 2rem;
+  }
+}

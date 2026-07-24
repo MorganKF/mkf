@@ -167,3 +167,22 @@ footer {
 #source-link:focus {
   color: var(--color-secondary);
 }
+
+@media (max-width: 700px) {
+  body {
+    padding: var(--spacing-unit);
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: auto auto 1fr auto;
+    gap: var(--spacing-unit);
+    grid-template-areas:
+      "header"
+      "nav"
+      "main"
+      "footer";
+  }
+
+  footer {
+    justify-content: center;
+    padding-right: 0;
+  }
+}
