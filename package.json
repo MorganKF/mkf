@@ -14,16 +14,15 @@
     "@11ty/eleventy-img": "^6.0.4",
     "@11ty/eleventy-plugin-rss": "^3.0.0",
     "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.2",
-    "@tinacms/cli": "^2.4.1",
-    "@types/node": "^25.9.1",
+    "@tinacms/cli": "^2.5.6",
     "autoprefixer": "^10.5.0",
     "cssnano": "^8.0.1",
     "eleventy-plugin-toc": "^1.1.5",
-    "markdown-it": "^14.2.0",
+    "markdown-it": "^14.3.0",
     "markdown-it-anchor": "^9.2.0",
-    "postcss": "^8.5.9",
+    "postcss": "^8.5.23",
     "postcss-import": "^16.1.1",
     "sanitize.css": "^13.0.0",
-    "tinacms": "^3.8.3"
+    "tinacms": "^3.11.0"
   }
 }
